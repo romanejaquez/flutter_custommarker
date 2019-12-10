@@ -47,6 +47,7 @@ class MapPageState extends State<MapPage> {
       markers: _markers,
       initialCameraPosition: initialLocation,
       onMapCreated: (GoogleMapController controller) {
+          controller.setMapStyle(Utils.mapStyles);
           _controller.complete(controller);
           setState(() {
             _markers.add(
